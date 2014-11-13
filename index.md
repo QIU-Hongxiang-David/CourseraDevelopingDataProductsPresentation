@@ -1,0 +1,85 @@
+---
+title       : Normal Distribution Calculator
+subtitle    : A Handy Shiny App Calculating Normal Distribution
+author      : QIU Hongxiang
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, quiz, bootstrap]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+
+--- &radio
+
+## Introduction to Normal Distribution and App
+
+* Normal distribution: widely used; hard to calculate by hand or simple calculators. Weird probability density function with no elementary anti derivative:$f(x)=\frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
+* Three common values to calculate given parameters of a normal distribution: cumulative probability, density and quantile.
+* This Shiny App can do all these calculations without knowledge in programming.
+* What else can you do with this App?
+
+1. Generate random numbers
+2. _Plot_
+3. Calculte t distribution
+4. Nothing
+
+*** .hint
+
+Go to http://davidqiu.shinyapps.io/CourseraDevelopingDataProductsShiny and check out!
+
+---
+
+## Function 1: Probability
+
+* Select "Probability" in "Kind of Parameter" and input parameters to determine normal distribution.
+* Input Known and click "Claculate!" button to calculate P(x<Known).
+* What's running behind?
+    + The App runs `pnorm(Know, Mean, Standard Deviation)` function in R.
+    + For example,Know=15,  Mean=10, Standard Deviation=5, the result is:
+    
+    ```r
+    pnorm(15,10,5)
+    ```
+    
+    ```
+    ## [1] 0.8413447
+    ```
+
+
+---
+
+## Function 2: Density
+
+* Select "Density" in "Kind of Parameter" and input parameters to determine normal distribution.
+* Input Known and click "Claculate!" button to calculate f(Known).
+* What's running behind?
+    + The App runs `dnorm(Know, Mean, Standard Deviation)` function in R.
+    + For example,Know=15,  Mean=10, Standard Deviation=5, the result is:
+    
+    ```r
+    dnorm(15,10,5)
+    ```
+    
+    ```
+    ## [1] 0.04839414
+    ```
+
+
+---
+
+## Function 3: Quantile
+
+* Select "Quantile" in "Kind of Parameter" and input parameters to determine normal distribution.
+* Input Known and click "Claculate!" button to calculate X such that P(x<X)=Known.
+* What's running behind?
+    + The App runs `qnorm(Know, Mean, Standard Deviation)` function in R.
+    + For example,Know=0.6, Mean=10, Standard Deviation=5, the result is:
+    
+    ```r
+    qnorm(.6,10,5)
+    ```
+    
+    ```
+    ## [1] 11.26674
+    ```
