@@ -35,8 +35,8 @@ Go to http://davidqiu.shinyapps.io/CourseraDevelopingDataProductsShiny and check
 * Select "Probability" in "Kind of Parameter" and input parameters to determine normal distribution.
 * Input Known and click "Claculate!" button to calculate P(x<Known).
 * What's running behind?
-    + The App runs `pnorm(Know, Mean, Standard Deviation)` function in R.
-    + For example,Know=15,  Mean=10, Standard Deviation=5, the result is:
+    + The App runs `pnorm(Known, Mean, Standard Deviation)` function in R.
+    + For example,Known=15,  Mean=10, Standard Deviation=5, the result is:
     
     ```r
     pnorm(15,10,5)
@@ -54,8 +54,8 @@ Go to http://davidqiu.shinyapps.io/CourseraDevelopingDataProductsShiny and check
 * Select "Density" in "Kind of Parameter" and input parameters to determine normal distribution.
 * Input Known and click "Claculate!" button to calculate f(Known).
 * What's running behind?
-    + The App runs `dnorm(Know, Mean, Standard Deviation)` function in R.
-    + For example,Know=15,  Mean=10, Standard Deviation=5, the result is:
+    + The App runs `dnorm(Known, Mean, Standard Deviation)` function in R.
+    + For example,Known=15,  Mean=10, Standard Deviation=5, the result is:
     
     ```r
     dnorm(15,10,5)
@@ -73,8 +73,8 @@ Go to http://davidqiu.shinyapps.io/CourseraDevelopingDataProductsShiny and check
 * Select "Quantile" in "Kind of Parameter" and input parameters to determine normal distribution.
 * Input Known and click "Claculate!" button to calculate X such that P(x<X)=Known.
 * What's running behind?
-    + The App runs `qnorm(Know, Mean, Standard Deviation)` function in R.
-    + For example,Know=0.6, Mean=10, Standard Deviation=5, the result is:
+    + The App runs `qnorm(Known, Mean, Standard Deviation)` function in R.
+    + For example,Known=0.6, Mean=10, Standard Deviation=5, the result is:
     
     ```r
     qnorm(.6,10,5)
